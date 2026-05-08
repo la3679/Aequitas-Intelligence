@@ -1,0 +1,63 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User account information and preferences",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Watchlist": {
+      "title": "User Watchlist",
+      "description": "Stocks followed by the user",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "symbols": { "type": "array", "items": { "type": "string" } },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "symbols"]
+    },
+    "Portfolio": {
+      "title": "User Portfolio",
+      "description": "Stock holdings and investment performance",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "holdings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "symbol": { "type": "string" },
+              "quantity": { "type": "number" },
+              "averagePrice": { "type": "number" }
+            }
+          }
+        },
+        "totalValue": { "type": "number" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "User",
+      "description": "Main user document"
+    },
+    "watchlists/{userId}": {
+      "schema": "Watchlist",
+      "description": "User specific watchlists"
+    },
+    "portfolios/{userId}": {
+      "schema": "Portfolio",
+      "description": "User specific portfolios"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Aequitas Intelligence",
+  "description": "Production-grade AI-powered stock intelligence platform with real-time market data, predictive analytics, and institutional-grade insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["Real-time Market Data", "AI Sentiment Analysis", "Predictive Forecasting"]
+}
