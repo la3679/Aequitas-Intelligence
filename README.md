@@ -1,7 +1,5 @@
 # Lumina Global Intelligence Terminal
 
-![Lumina Terminal Header](https://images.unsplash.com/photo-1611974717482-580acc9ed327?q=80&w=2670&auto=format&fit=crop)
-
 Lumina is a next-generation high-performance financial intelligence platform designed for real-time market synthesis and advanced predictive analytics. Developed for analysts who require sub-second latency and deep-layer data intelligence, Lumina provides an immersive, neural-themed environment to track the "Neural Universe"—a cluster of over 1,000+ equity nodes and digital assets.
 
 ## 🚀 Vision & Philosophy
